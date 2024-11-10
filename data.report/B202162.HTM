@@ -1,0 +1,2228 @@
+F
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>BIR</title>
+    <link href="http://127.0.0.1:8080/dnb/classes/SCREEN1.css" type="text/css" rel="stylesheet">
+    <link href="http://127.0.0.1:8080/dnb/classes/PRINT.css" type="text/css" rel="stylesheet" media="print">
+    <script type="text/javascript" language="javascript/css"
+        src="http://127.0.0.1:8080/dnb/functions/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" language="javascript/css"
+        src="http://127.0.0.1:8080/dnb/functions/jquery.dropdownPlain.js"></script>
+    <script type="text/javascript" language="javascript/css" src="http://127.0.0.1:8080/dnb/functions/main.js"></script>
+    <script type="text/javascript" language="javascript/css"
+        src="http://127.0.0.1:8080/dnb/functions/highcharts.js"></script>
+</head>
+
+<body><a name="top" id="top"></a>
+    <div align="center">
+        <div class="report-header"><img src="http://127.0.0.1:8080/dnb/images/ESP_Bir.jpg" height="135"
+                alt="D&amp;B Report"></div>
+        <div class="clear-both"></div>
+        <div class="report-menu">
+            <ul class="dropdown">
+                <li><a href="#header-identification-summary">Datos Generales</a>
+                    <ul class="submenu">
+                        <li><a href="#ID-anchor">Datos Generales</a></li>
+                    </ul>
+                </li>
+                <li><a href="#header-trade-payments">Generales</a>
+                    <ul class="submenu">
+                        <li><a href="#pagos-anchor">Referencias Comerciales</a></li>
+                        <li><a href="#protestos-anchor">Protestos</a></li>
+                        <li><a href="#banks-anchor">Bancos</a></li>
+                        <li><a href="#sbs-anchor">SBS</a></li>
+                        <li><a href="#equifax-anchor">SBS por Entidades</a></li>
+                        <li><a href="#seguros-new-anchor">Seguros</a></li>
+                    </ul>
+                </li>
+                <li><a href="#header-history">Negocio &amp; Operaciones</a>
+                    <ul class="submenu">
+                        <li><a href="#history-anchor">Historia</a></li>
+                        <li><a href="#directores-anchor">Directores</a></li>
+                        <li><a href="#operations-anchor">Operaciones</a></li>
+                        <li><a href="#obras-anchor">Obras</a></li>
+                    </ul>
+                </li>
+                <li><a href="#header-financial-information">Informacion Financiera</a>
+                    <ul class="submenu">
+                        <li><a href="#comparat-anchor">Comparativos</a></li>
+                        <li><a href="#BalSht-anchor">Balance General</a></li>
+                        <li><a href="#BalPar-anchor">Balance Parcial / Preliminar</a></li>
+                        <li><a href="#comentarios-anchor">Consideraciones Especiales</a></li>
+                    </ul>
+                </li>
+                <li><a href="#header-appendices">Apendices</a>
+                    <ul class="submenu">
+                        <li><a href="#CustSrv-anchor">Servicio al Cliente</a></li>
+                        <li><a href="#DNBRatGloss-anchor">Glosario del D&amp;B Rating</a></li>
+                        <li><a href="#Confid-anchor">Confidencialidad</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+        </div>
+        <div class="clear-both"></div>
+        <table class="container-table">
+            <tr id="header-report">
+                <td class="container-spacer">-</td>
+                <td class="container-border">-</td>
+                <td class="container-content" style="padding-bottom:2px;">
+                    <div class="report-functions"><a href="javascript:alert('Encender Impresora'); window.print();"><img
+                                src="http://127.0.0.1:8080/dnb/images/Printer.gif" height="10" width="12"
+                                border="0">Imprimir</a></div>
+                    <h1>CONSTRUCTORA UPACA S.A.</h1>
+                    <ul class="report-details">
+                        <li class="report-printeddate">Fecha de Entrega: 26/10/2023<br>Fecha de Actualizacion:15/07/2015
+                        </li>
+                        <li class="report-subscriber">Suscriptor:818000188<br>Referencia:</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr id="header-identification-summary">
+                <td class="container-highlight">-</td>
+                <td class="container-border-header">-</td>
+                <td class="container-header"><a name="identification-summary-anchor"></a>
+                    <h2>Datos Generales</h2><a class="collapse-expand"
+                        href="javascript:doExpand('Datos Generales','img/')"><img
+                            src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                            alt="Summarise" border="0" name="&#xA;butDatos Generales"></a>
+                </td>
+            </tr>
+            <tr id="content-identification-summary">
+                <td class="container-spacer"><a name="IdentificationSummary-anchor"></a></td>
+                <td class="container-border">-</td>
+                <td class="container-content">
+                    <div id="IdentificationSummary" style="display:block;">
+                        <table class="columns-indenfication-risksummary">
+                            <tr>
+                                <td class="column-1"><a name="ID-anchor"></a>
+                                    <h3>Datos Generales</h3>
+                                    <table class="table-identification">
+                                        <tr class="group">
+                                            <td class="label" width="110">Numero<br />D-U-N-S:</td>
+                                            <td class="value">93-406-7679</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="label">Nombre Comercial:</td>
+                                            <td class="value">CONSTRUCTORA UPACA</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="label">RUC:</td>
+                                            <td class="value">20101031854</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="label">Direcci&oacuten:</td>
+                                            <td class="value">Calle Manco Cápac Nº 551<br>Lima 18<br>Per&uacute</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="label">Ubigeo:</td>
+                                            <td class="value">150122</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">Tel&eacutefono(s):</td>
+                                            <td class="value">(+51) 1 4440579</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">E-mail:</td>
+                                            <td class="value">pfalcon@upaca.com.pe</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">Sitio Web:</td>
+                                            <td class="value">www.upaca.com.pe</td>
+                                        </tr>
+                                    </table><a name="Summ-anchor"></a>
+                                    <h3>Resumen</h3>
+                                    <table class="table-summary">
+                                        <tr>
+                                            <td class="label" width="110">Estructura Legal:</td>
+                                            <td class="value">Empresa Privada</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" width="110">Actual Control:</td>
+                                            <td class="value">1966</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="label">A&ntildeo de Fundacion:</td>
+                                            <td class="value">1966</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">Actividad:</td>
+                                            <td class="value">
+                                                <p align="justify">Contratista De Obras Civiles.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">Sic Primario:</td>
+                                            <td class="value">15220000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">Detalle SIC:</td>
+                                            <td class="value">Construcci�n de edificios residenciales</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="label">Personal:</td>
+                                            <td class="value">45</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="column-2">
+                                    <ul class="list-risksummary">
+                                        <li class="header">
+                                            <h3 class="clear-border">RESUMEN DE RIESGO</h3>
+                                        </li>
+                                        <li class="content">
+                                            <h4>Evaluacion de Riesgo</h4>
+                                            <table class="table-risksummary">
+                                                <tr>
+                                                    <td class="label"><a href="#risksummary-dnbrating">Rating D&B</a>
+                                                    </td>
+                                                    <td class="value">3A3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">Record</td>
+                                                    <td class="value">Proceso de reestructuraci&oacute;n</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">Pagos</td>
+                                                    <td class="value">Puntual</td>
+                                                </tr>
+                                            </table>
+                                            <h4>Resumen Financiero</h4>
+                                            <table class="table-risksummary">
+                                                <tr>
+                                                    <td class="label">Capital</td>
+                                                    <td class="value">S/. 12,930,071</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">Patrimonio</td>
+                                                    <td class="value">S/. 16,438,841</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">Ventas</td>
+                                                    <td class="value">S/. 12,705,879</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">Situaci&oacuten Financiera</td>
+                                                    <td class="value">Aceptable</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                    </ul>
+                                    <h6>Moneda</h6>
+                                    <p align="justify" class="indent-6">Las cifras monetarias en este informe son
+                                        representadas en Soles (S/.) a menos que se indique otro criterio.</p>
+                                </td>
+                            </tr>
+                        </table><br class="clear-both"><a name="RiskAsmt-anchor"></a>
+                        <h3>Evaluacion de Riesgo</h3>
+                        <table class="columns-riskassessment">
+                            <tr>
+                                <td class="column-1">
+                                    <ul class="list-riskindicator">
+                                        <li class="header">
+                                            <h4 class="clear-border"><a name="risksummary-riskindicator"></a>Indicador
+                                                de Riesgo<span>3</span></h4>
+                                        </li>
+                                        <li class="content1"><img
+                                                src="http://127.0.0.1:8080/dnb/images/dnbAceptable.png"
+                                                alt="3-Aceptable"></li>
+                                    </ul>
+                                </td>
+                                <td class="column-2">
+                                    <ul class="list-riskindicator">
+                                        <li class="header">
+                                            <h4 class="clear-border"><a name="risksummary-dnbrating"></a>D&B
+                                                Rating<span>3A3</span></h4>
+                                        </li>
+                                        <li class="content2">
+                                            <table class="table-riskassessment">
+                                                <tr class="border">
+                                                    <td class="label">Capacidad Financiera</td>
+                                                    <td class="value">3A</td>
+                                                    <td width="300">Basado en el patrimonio contable<br>US$ 1,500,000 -
+                                                        9,999,999
+                                                </tr>
+                                                <tr>
+                                                    <td class="label">Indicador de Riesgo</td>
+                                                    <td class="value">3</td>
+                                                    <td width="300">Aceptable(Levemente mayor al riesgo promedio)</td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p>Proceder con la transacci&oacuten, pero monitorearlo en forma cercana.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr id="header-trade-payments">
+                <td class="container-highlight">-</td>
+                <td class="container-border-header">-</td>
+                <td class="container-header"><a name="pagos-anchor"></a>
+                    <h2>Referencias Comerciales</h2><a class="collapse-expand"
+                        href="javascript:doExpand('Referencias Comerciales','img/')"><img
+                            src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                            alt="Summarise" border="0" name="&#xA; butReferencias Comerciales"></a>
+                </td>
+            <tr id="header-report">
+                <td class="container-spacer">-</td>
+                <td class="container-border">-</td>
+                <td class="container-content" style="padding-bottom:2px;">
+                    <div id="TradePayments" style="display:block;">
+                        <h3>Referencias Comerciales de Pago</h3>
+                        <p align="justify">D&B obtiene referencias de pagos de proveedores locales e internacionales.
+                            Las siguientes referencias podrian provenir de una o de ambas fuentes. Las cantidades podran
+                            haber sido redondeadas a la cifra m&aacutes cercana dentro del rango.</p>
+                        <p>Al 16/07/2015</p>
+                        <p align="justify">A JUL 2015, refirio como proveedor a: Terramaq S.A.C., no se obtuvo
+                            información al momento de la solicitud.</p>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Volvo Peru S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">14/07/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">US$.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cr&eacutedito M&aacuteximo:</td>
+                                <td class="value">1,000,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Importe Ultima Compra:</td>
+                                <td class="value">400,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 0-30 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">30/11/2014</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">Cliente vigente.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Tecnica Comercial Diesel S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">14/07/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">US$.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cr&eacutedito M&aacuteximo:</td>
+                                <td class="value">4,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 0-30 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">01/07/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">Cliente constante, no proporcionaron mayor información.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Decorplas S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">14/07/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">S/</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cr&eacutedito M&aacuteximo:</td>
+                                <td class="value">5,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 7-15 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">30/03/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Importe Ultima Compra:</td>
+                                <td class="value">2,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">Tambien trabajan al contado. Cliente exporadico.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Empresa De Transportes Universo S.R.L.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">14/07/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">S/</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cr&eacutedito M&aacuteximo:</td>
+                                <td class="value">5,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 0-7 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">30/05/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Importe Ultima Compra:</td>
+                                <td class="value">2,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">50% al contado. Cliente desde hace 3 años.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Tecnica Comercial Diesel S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">27/05/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">S/</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 15-30 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">01/04/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Importe Ultima Compra:</td>
+                                <td class="value">4,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">Cuenta con una línea abierta, cliente desde hace 15 años.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Volvo Peru S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">27/05/2015</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">US$.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 15-30 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">11/11/2013</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Importe Ultima Compra:</td>
+                                <td class="value">300,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">Cuenta con una línea de crédito amplia.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Tecnica Comercial Diesel S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">03/09/2014</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">S/</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cr&eacutedito M&aacuteximo:</td>
+                                <td class="value">4,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">F/. 0-7 d&iacute;as</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">Cliente desde hace 15 años. Cancela con cheque diferido o al
+                                        contado.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Volvo Peru S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">06/11/2013</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Moneda:</td>
+                                <td class="value">US$.</td>
+                            </tr>
+                            <td class="text"><span class="nbsp">-</span></td>
+                            <tr>
+                                <td class="label">Fecha Ultima Compra:</td>
+                                <td class="value">01/02/2013</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Importe Ultima Compra:</td>
+                                <td class="value">284,000</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cumplimiento:</td>
+                                <td class="value">Puntual</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">No proporcionaron mayor información. Le proveen de unidades,
+                                        trabajan mediante leasing con Banco GNB Peru S.A.(HSBC)</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Proveedor:</td>
+                                <td class="value-emphasize">Tecnica Comercial Diesel S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Fecha de Consulta:</td>
+                                <td class="value">06/11/2013</td>
+                            </tr>
+                            <tr>
+                                <td class="label">T&eacuterminos de Venta:</td>
+                                <td class="value">Contado 0-0 </td>
+                            </tr>
+                            <tr>
+                                <td class="label">Comentarios:</td>
+                                <td class="value">
+                                    <p align="justify">No proporcionaron mayor información.</p>
+                                </td>
+                            </tr>
+                        </table><a name="acreedor-anchor"></a>
+                        <h3>Acreedores</h3>
+                        <p>Central de riesgo no reporta detalle de morosidad </p>
+                        <table class="table-comparative" width="650">
+                            <table class="table-data-right"></table>
+                            <p align="justify">Las referencias de pagos contenidas en este reporte pudieron ser
+                                obtenidas de la misma fuente en diferentes meses y monedas. En algunas ocasiones, los
+                                pagos vencidos pueden ser el resultado de disputas sobre mercancias, facturas perdidas,
+                                etc.</p>
+                    </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif"
+                            width="9" height="6" alt="top" border="0"></a>
+                </td>
+            </tr>
+            <tr id="header-trade-information">
+                <td class="container-highlight">-</td>
+                <td class="container-border-header">-</td>
+                <td class="container-header"><a name="protestos-anchor"></a>
+                    <h2>Protestos</h2><a class="collapse-expand" href="javascript:doExpand('Protestos','img/')"><img
+                            src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                            alt="Summarise" border="0" name="&#xA; butProtestos"></a>
+                </td>
+            </tr>
+            <tr id="header-report">
+                <td class="container-spacer">-</td>
+                <td class="container-border">-</td>
+                <td class="container-content" style="padding-bottom:2px;">
+                    <div id="TradePayments" style="display:block;"><a name="Protestos-anchor"></a>
+                        <table class="table-data-right">
+                            <p align="justify">Central de riesgo consultada el 27/05/2015 reporta que al 30/04/2015 no
+                                registra protestos </p>
+                        </table>
+                    </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif"
+                            width="9" height="6" alt="top" border="0"></a>
+                </td>
+            </tr>
+            <tr id="header-banks-information">
+                <td class="container-highlight">-</td>
+                <td class="container-border-header">-</td>
+                <td class="container-header"><a name="banks-anchor"></a>
+                    <h2>Bancos</h2><a class="collapse-expand" href="javascript:doExpand('Bancos','img/')"><img
+                            src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                            alt="Summarise" border="0" name="&#xA; butBancos"></a>
+                </td>
+            </tr>
+            <tr id="header-report">
+                <td class="container-spacer">-</td>
+                <td class="container-border">-</td>
+                <td class="container-content" style="padding-bottom:2px;">
+                    <div id="Banks" style="display:block;">
+                        <p>Al 28/05/2015</p>
+                        <p></p>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Nombre:</td>
+                                <td class="value-emphasize">Banco de Cr&eacute;dito</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cuenta(s):</td>
+                                <td class="value">MN.(S/.) 194-2213511-096; ME.(US$) 194-21822331-66</td>
+                            </tr>
+                        </table>
+                        <table class="table-standard">
+                            <tr>
+                                <td class="label">Nombre:</td>
+                                <td class="value-emphasize">Banco GNB Per&uacute; S.A.</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Cuenta(s):</td>
+                                <td class="value">MN.(S/.) 001-245463-001; ME.(US$) 001-245463-301</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                    </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif"
+                            width="9" height="6" alt="top" border="0"></a>
+                </td>
+            </tr>
+            <tr id="header-sbs-information">
+                <td class="container-highlight">-</td>
+                <td class="container-border-header">-</td>
+                <td class="container-header"><a name="sbs-anchor"></a>
+                    <h2>SBS</h2><a class="collapse-expand" href="javascript:doExpand('Sbs','img/')"><img
+                            src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                            alt="Summarise" border="0" name="&#xA; butSbs"></a>
+                </td>
+            </tr>
+            <tr id="header-report">
+                <td class="container-spacer">-</td>
+                <td class="container-border">-</td>
+                <td class="container-content" style="padding-bottom:2px;">
+                    <div id="Sbs" style="display:block;">
+                        <p> Fuentes del Sistema Financiero nacional (SBS) , al 31/05/2015 reportan: </p>
+                        <p><b>Calificacion:</b></p>
+                        <ul class="list-enquiry">
+                            <li>Normal 100.00%</li>
+                        </ul>
+                        <table class="table-data-right">
+                            <tr>
+                                <th class="text" width="250">Cuenta</th>
+                                <th>S/</th>
+                                <th>US$</th>
+                            </tr>
+                            <tr>
+                                <td class="text" width="250">Directa</td>
+                                <td>883,036</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="text" width="250">Indirecta</td>
+                                <td>25,773,826</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="text" width="250">Garantias</td>
+                                <td>19,548,342</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                        <table class="table-data-right">
+                            <tr>
+                                <td class="text" width="250">Deuda al sistema financiero al 31/12/2014</td>
+                                <td>23,403,734</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="text" width="250">Deuda al sistema financiero al 31/12/2013</td>
+                                <td>5,403,925</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="text" width="250">Deuda al sistema financiero al 31/12/2012</td>
+                                <td>5,468,505</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                        <p align="justify">Calificación SBS últimos años: DIC 2014, DIC 2013, DIC 2012, Normal 100%.</p>
+                    </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif"
+                            width="9" height="6" alt="top" border="0"></a>
+                </td>
+            </tr>
+            <tr id="header-equifax-information">
+                <td class="container-highlight">-</td>
+                <td class="container-border-header">-</td>
+                <td class="container-header"><a name="equifax-anchor"></a>
+                    <h2>SBS por Entidades</h2><a class="collapse-expand"
+                        href="javascript:doExpand('SBS por Entidades','img/')"><img
+                            src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                            alt="Summarise" border="0" name="&#xA; butSBS por Entidades"></a>
+                </td>
+            <tr id="header-report">
+                <td class="container-spacer">-</td>
+                <td class="container-border">-</td>
+                <td class="container-content" style="padding-bottom:2px;">
+                    <div id="TradePayments" style="display:block;">
+                        <h3>Estructura de Deuda</h3>
+                        <table class="table-data">
+                            <th class="text" width="150">Aceedor</th>
+                            <th>Cr&eacuteditos<br>Vigentes<br></th>
+                            <th>Cr&eacuteditos<br>Refinanciados<br></th>
+                            <th>Cr&eacuteditos<br>Vencidos<br></th>
+                            <th>Cr&eacuteditos<br>Cobranza<br>Judicial</th>
+                            <th>Calificaci&oacuten</th>
+            </tr>
+            <tr>
+                <td class="text">Banco De Cr&eacute;Dito</td>
+                <td>16,228,916</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td class="text">Normal</td>
+            </tr>
+            <tr>
+                <td class="text">Banco Gnb Per&uacute; S.A.</td>
+                <td>10,427,946</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td class="text">Normal</td>
+            </tr>
+        </table>
+    </div>
+    <h3>Definici&oacuten de Calificaci&oacuten SBS seg&uacuten atraso d&iacuteas</h3>
+    <table class="table-data">
+        <tr>
+            <th>Segun dias<br>de atraso<br></th>
+            <th>Cr&eacuteditos<br>Comerciales<br></th>
+            <th>Cr&eacuteditos de<br>Consumo y<br>MicroEmpresas</th>
+            <th>Cr&eacuteditos<br>Hipotecarios<br></th>
+        </tr>
+        <tr>
+            <td>Normal</td>
+            <td>0</th>
+            <td>0-8</td>
+            <td>0-30</td>
+        </tr>
+        <tr>
+            <td>Problema Potencial</td>
+            <td>1-60</td>
+            <td>9-30</td>
+            <td>31-90</td>
+        </tr>
+        <tr>
+            <td>Deficiente</td>
+            <td>61-120</td>
+            <td>31-160</td>
+            <td>91-120</td>
+        </tr>
+        <tr>
+            <td>Dudoso</td>
+            <td>121-365</td>
+            <td>61-120</td>
+            <td>121-365</td>
+        </tr>
+        <tr>
+            <td>P&eacuterdida</td>
+            <td>>365</td>
+            <td>>120</td>
+            <td>>365</td>
+        </tr>
+    </table><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+            height="6" alt="top" border="0"></a></td>
+    <tr id="header-trade-payments">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="seguros-new-anchor"></a>
+            <h2>Seguros</h2><a class="collapse-expand" href="javascript:doExpand('Seguros','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butSeguros"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="Seguros" style="display:block;">
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Cobertura:</td>
+                        <td class="value">Vehícular</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Compa&ntildeia:</td>
+                        <td class="value-emphasize">R&iacute;mac Seguros y Reaseguros</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Vigencia:</td>
+                        <td class="value">27 FEB 2016</td>
+                    </tr>
+                </table>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-history">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="history-anchor"></a>
+            <h2>Historia</h2><a class="collapse-expand" href="javascript:doExpand('Historia','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butHistoria"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="TradePayments" style="display:block;"><a name="historia-anchor"></a>
+                <h3>Antecedentes</h3>
+                <table class="table-data-right">Sociedad An&oacute;nima , constitu&iacute;da(o) el 19 MAR 1966, en el
+                    Registro P&uacuteblico de Lima, partida electr&oacutenica 11004828. Notario Luis Galindo Pardo.
+                    Capital inicial S/ 21,589,844. Capital Actual S/ 12,930,071</p>El capital se encuentra suscrito por:
+                    <br>
+                    <ul class="list-enquiry">
+                        <li>Sucesión Julio Fernando Piccini Martin 39.30%</li>
+                        <li>Sucesión Jose Guillermo Piccini Martin 18.89%</li>
+                        <li>Luis Felipe Piccini Martin 14.64%</li>
+                        <li>Luis Felipe Piccini Delgado 14.00%</li>
+                        <li>Eduardo Piccini Martin 13.17%</li>
+                    </ul>
+                    <p align="justify">Anteriormente los accionistas fueron: Julio Fernando Piccini Martín (39.20%),
+                        José Piccini Martín (18.58%) (fallecido), Luis Felipe Piccini Martín (14.98%), Luis
+                        PicciniDelgado (14.00%) y Eduardo Piccini Martín (13.24%).</p>
+                    <p align="justify">El capital ha sido obtenido del balance parcial al 31 MAY 2015.</p>
+                </table>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-history">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="directores-anchor"></a>
+            <h2>Directores</h2><a class="collapse-expand" href="javascript:doExpand('Directores','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butDirectores"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="TradePayments" style="display:block;"><a name="directores-anchor"></a>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Nombre:</td>
+                        <td class="value-emphasize">Eduardo Piccini Martin</td>
+                    </tr>
+                    <tr>
+                        <td class="label">1&#186 Cargo:</td>
+                        <td class="value">Presidente del Directorio</td>
+                    </tr>
+                    <tr>
+                        <td class="label">2&#186 Cargo:</td>
+                        <td class="value">Representante Legal</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Titulo Profesional:</td>
+                        <td class="value">Ingeniero Civil</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Experiencia Laboral:</td>
+                        <td class="value">
+                            <p>Fue DIR de Inversiones Upasol S.A.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-history">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="ejecutivos-anchor"></a>
+            <h2>Ejecutivos</h2><a class="collapse-expand" href="javascript:doExpand('Ejecutivos','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butEjecutivos"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="TradePayments" style="display:block;"><a name="ejecutivos-anchor"></a>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Nombre:</td>
+                        <td class="value-emphasize">Julio Fernando Piccini Larco</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Cargo:</td>
+                        <td class="value">Gerente General</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Consulta:</td>
+                        <td class="value">15/07/2015</td>
+                    </tr>
+                </table>
+                
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Nombre:</td>
+                        <td class="value-emphasize">Pablo Falcón Núñez</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Cargo:</td>
+                        <td class="value">Contador y Gerente de Administraci&oacuten y Finanzas</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Consulta:</td>
+                        <td class="value">15/07/2015</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Nombre:</td>
+                        <td class="value-emphasize">Ismael Ramos Loyola</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Cargo:</td>
+                        <td class="value">Jefe de Personal/RRHH/RRII</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Consulta:</td>
+                        <td class="value">15/07/2015</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Nombre:</td>
+                        <td class="value-emphasize">Cesar Zevallos Pizarro</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Cargo:</td>
+                        <td class="value">Gerente de Equipos</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Consulta:</td>
+                        <td class="value">15/07/2015</td>
+                    </tr>
+                </table>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-history">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="operations-anchor"></a>
+            <h2>Operaciones</h2><a class="collapse-expand" href="javascript:doExpand('Operaciones','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butOperaciones"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="TradePayments" style="display:block;"><a name="operations-anchor"></a>
+                <h3>Detalle</h3>
+                <p align="justify">Contratista de obras civiles en general (obras de saneamiento, carreteras, puentes,
+                    irrigaciones, presas, complejos industriales, conjuntos habitacionales, etc).</p>
+                <p align="justify">Territorio de compras Nacional 100%</p>
+                <p align="justify">Condiciones de Venta al contado,50%, con facturas,50% hasta 30 d&iacuteas</p>
+                <p align="justify">Territorio de Venta a nivel nacional, 100%</p>
+                <p>Personal: 45 Empleadosincluye 45 permanentes</p>
+                <h3>Ubicaci&oacuten</h3>
+                <p>El local es propio, la construcci&oacuten es de ladrillo y cemento, ubicado en zona
+                    residencial.Corresponde a la sede administrativa y gerencia de la investigada.
+                <p align="justify">Hasta 21 OCT 2004, tuvo sede en Av. Canaval y Moreyra 452 Int. 17, Urb. Córpac, Lima
+                    27. Hasta 14 ENE 2004, tuvo sede en Av. Canaval y Moreyra 452 Int. 16, Lima 27.</p>
+                </p>
+                <h3>Otras Instalaciones</h3>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Tipo:</td>
+                        <td class="value-emphasize">Almac&eacute;n/Dep&oacute;sito</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Direcci&oacuten:</td>
+                        <td class="value">Predio Rústico San Vicente No. BA36 Int. Km. 34 Parcela</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Ciudad:</td>
+                        <td class="value">Lima 16</td>
+                    </tr>
+                </table>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-history">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="obras-anchor"></a>
+            <h2>Obras</h2><a class="collapse-expand" href="javascript:doExpand('Obras','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butObras"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="TradePayments" style="display:block;"><a name="obras-anchor"></a>
+                <h3>Obras Ejecutadas</h3>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Construcción de Carretera Ingenio-Chachapoyas (Inició en JUL 2003)</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Para:</td>
+                        <td class="value">Ministerio de Transportes</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Monto:</td>
+                        <td class="value">US$. 8,000,000</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de T&eacutermino:</td>
+                        <td class="value">JUL 2004</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Construcción de Presa Río Rejo</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Para:</td>
+                        <td class="value">Cía. Minera Yanacocha</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Monto:</td>
+                        <td class="value">US$. 4,000,000</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de T&eacutermino:</td>
+                        <td class="value">OCT 2003</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Asentamiento E-8, Vaso Regulador, Obras Conexas y Red de Distribución</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Para:</td>
+                        <td class="value">Autoridad Autónoma de Majes</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Inicio:</td>
+                        <td class="value">2001</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de T&eacutermino:</td>
+                        <td class="value">2002.</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Construcción, Rehabilitación y Mejoramiento de la Carretera Cuzco-Abancay:
+                            Tramo IV (Occoruro-Abancay)</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Para:</td>
+                        <td class="value">MTC</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Inicio:</td>
+                        <td class="value">1999</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de T&eacutermino:</td>
+                        <td class="value">2001.</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">III Etapa Proyecto Especial Chira - Piura</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Para:</td>
+                        <td class="value">Instituto Nacional de Desarrollo</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Inicio:</td>
+                        <td class="value">1993</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de T&eacutermino:</td>
+                        <td class="value">1998.</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Pavimentación Av. Aeropuerto - Av. Arborización - Av. Yarina</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Para:</td>
+                        <td class="value">CTAR UCAYALI</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de Inicio:</td>
+                        <td class="value">1998</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fecha de T&eacutermino:</td>
+                        <td class="value">2000.</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Obra civil y montaje de la nueva planta de tratamiento de agua potable de
+                            Chiclayo</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Rehabilitación-ampliación de la carretera Pucallpa-Yarinacocha-II Etapa</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Rehabilitación y mejoramiento de la carretera Pisco-Ayacucho, tramo Puente
+                            Pacra-Puente Choclococha</td>
+                    </tr>
+                </table>
+                <table class="table-standard">
+                    <tr>
+                        <td class="label">Obra:</td>
+                        <td class="value">Mejoramiento y rehabilitación de la carretera Pacasmayo-Cajamarca tramo Ciudad
+                            de Dios-Chilete</td>
+                    </tr>
+                </table>
+                <p align="justify">(-) Carretera Pacasmayo-Cajamarca-Paguete No. 11. (-) Rehabilitación de la Carretera
+                    Panamericana Sur, Grupo III (Tramo Desvío Mollendo El Fiscal), Obras Hidráulicas en Minera
+                    Yanacocha, Obras de Rehabilitación de Infraestructura de servicio de Agua Potable y Alcantarillado
+                    de la Ciudad de Chiclayo y Pueblos Aledaños, Edificio Torre Costa Azul (Edificio de 19 niveles,
+                    conformado por 16 departamentos de 147 m2 y un Pent-House Duplex de 270 m2 y un Sótano de 525 m2 con
+                    un área total construída de 3,147.00 m2.</p>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-financial-information">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="comparat-anchor"></a>
+            <h2>Estados Financieros</h2><a class="collapse-expand"
+                href="javascript:doExpand('Comparativos','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA;butInformacion Financiera"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="FinancialInformation" style="display:block;">
+    <tr>
+        <td class="label capitalise"> </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Activo Corriente</td>
+        <td>9,752,479</td>
+        <td>5,651,054</td>
+        <td>8,306,376</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Pasivo Corriente</td>
+        <td>13,911,067</td>
+        <td>9,442,802</td>
+        <td>16,400,189</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Capital de Trabajo</td>
+        <td>-4,158,588</td>
+        <td>-3,791,748</td>
+        <td>-8,093,813</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Activo No Corriente</td>
+        <td>18,873,315</td>
+        <td>19,529,738</td>
+        <td>24,532,654</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Activo Total</td>
+        <td>28,625,794</td>
+        <td>25,180,792</td>
+        <td>32,839,030</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Pasivo Total</td>
+        <td>13,911,067</td>
+        <td>9,442,802</td>
+        <td>16,400,189</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Patrimonio</td>
+        <td>14,714,727</td>
+        <td>15,737,990</td>
+        <td>16,438,841</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Ventas</td>
+        <td>21,300,005</td>
+        <td>16,344,723</td>
+        <td>12,705,879</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultados</td>
+        <td>480,457</td>
+        <td>1,023,263</td>
+        <td>700,851</td>
+    </tr>
+    <tr class="row-comparative-empty">
+        <td colspan="4"></td>
+    </tr>
+    </table>
+    <tr>
+        <td class="label capitalise">Indice Corriente</td>
+        <td>0.70:1</td>
+        <td>0.60:1</td>
+        <td>0.51:1</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Endeud. Patrimonial Cte.</td>
+        <td>0.95:1</td>
+        <td>0.60:1</td>
+        <td>1.00:1</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Rotacion de Inventario</td>
+        <td>20.89 V</td>
+        <td>29.19 V</td>
+        <td>20.58 V</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Periodo de Cobranza</td>
+        <td>128.21 d</td>
+        <td>0.80 d</td>
+        <td>52.18 d</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Periodo de Pago</td>
+        <td>42.09 d</td>
+        <td>12.16 d</td>
+        <td>0.55 d</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Rentabilidad de las Ventas</td>
+        <td>2.26 %</td>
+        <td>6.26 %</td>
+        <td>5.52 %</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Rentabilidad del Patrimonio</td>
+        <td>3.27 %</td>
+        <td>6.50 %</td>
+        <td>4.26 %</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Dependencia Financiera</td>
+        <td>48.60 %</td>
+        <td>37.50 %</td>
+        <td>49.94 %</td>
+    </tr>
+    <tr class="row-comparative-empty">
+        <td colspan="4"></td>
+    </tr>
+    </table><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+            height="6" alt="top" border="0"></a></div>
+    </tr>
+    <tr id="header-financial-information">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="financial-information-anchor"></a>
+            <h2>Finanzas</h2><a class="collapse-expand" href="javascript:doExpand('Finanzas','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA;butFinanzas"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="FinancialInformation" style="display:block;">
+                <p align="justify">El 15/07/2015 Carlos Lazo, Departamento de Contabilidad suministró datos generales.
+                    En cuanto a cifras financieras fueron obtenidos de terceras fuentes. Balance General (PDT) 2012,
+                    2013 y 2014 y balance parcial al 31 MAY 2015.</p>
+    <tr>
+        <td class="label capitalise">Efectivo y equivalentes de efectivo</td>
+        <td>924,750</td>
+        <td>2,543,049</td>
+        <td>3,640,239</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Ctas x cobrar comerc. terceros y Relac.</td>
+        <td>7,585,483</td>
+        <td>36,495</td>
+        <td>3,682,977</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Cuentas x cobrar diversas terceros</td>
+        <td>325,802</td>
+        <td>5,512</td>
+        <td>524,938</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Mercaderias</td>
+        <td>916,444</td>
+        <td>458,222</td>
+        <td>458,222</td>
+    </tr>
+    <tr>
+        <td class="label capitalise"><b>ACTIVO CORRIENTE</b></td>
+        <td><b>9,752,479</td>
+        <td><b>5,651,054</td>
+        <td><b>8,306,376</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Inversiones mobiliarias e inmobiliarias</td>
+        <td>37,482</td>
+        <td>37,482</td>
+        <td>15,161</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Inmuebles maquinarias y equipo</td>
+        <td>42,867,509</td>
+        <td>36,990,190</td>
+        <td>38,011,505</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Depreciacion acumulada</td>
+        <td>-24,701,607</td>
+        <td>-18,243,324</td>
+        <td>-15,435,848</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Diferidos</td>
+        <td>380,716</td>
+        <td>695,323</td>
+        <td>280,841</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Otras cuentas Activo no Corriente</td>
+        <td>289,215</td>
+        <td>50,067</td>
+        <td>1,660,995</td>
+    </tr>
+    <tr>
+        <td class="label capitalise"><b>ACTIVO NO CORRIENTE</b></td>
+        <td><b>18,873,315</td>
+        <td><b>19,529,738</td>
+        <td><b>24,532,654</td>
+    </tr>
+    <tr>
+        <td class="label capitalise"><b>TOTAL ACTIVO</b></td>
+        <td><b>28,625,794</td>
+        <td><b>25,180,792</td>
+        <td><b>32,839,030</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Trib. y aportes al sist. pension y salud</td>
+        <td>685,258</td>
+        <td>211,781</td>
+        <td>665,033</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Remuneraciones y participaciones</td>
+        <td>427,697</td>
+        <td>130,275</td>
+        <td>149,162</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Ctas x pagar comerc. terceros y Relac.</td>
+        <td>2,238,460</td>
+        <td>451,851</td>
+        <td>28,947</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Obligaciones financieras</td>
+        <td>747,020</td>
+        <td>1,933,941</td>
+        <td>1,083,996</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Cuentas por pagar diversas terceros</td>
+        <td>2,160,119</td>
+        <td>443,186</td>
+        <td>327,537</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Otras cuentas Pasivo Corriente</td>
+        <td>7,652,513</td>
+        <td>6,154,008</td>
+        <td>14,145,514</td>
+    </tr>
+    <tr>
+        <td class="label capitalise"><b>PASIVO CORRIENTE</b></td>
+        <td><b>13,911,067</td>
+        <td><b>9,442,802</td>
+        <td><b>16,400,189</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Capital social</td>
+        <td>12,930,071</td>
+        <td>12,930,071</td>
+        <td>12,930,071</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultados acumulados</td>
+        <td>1,304,199</td>
+        <td>1,784,656</td>
+        <td>2,807,919</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultados del ejercicio</td>
+        <td>480,457</td>
+        <td>1,023,263</td>
+        <td>700,851</td>
+    </tr>
+    <tr>
+        <td class="label capitalise"><b>PATRIMONIO</b></td>
+        <td><b>14,714,727</td>
+        <td><b>15,737,990</td>
+        <td><b>16,438,841</td>
+    </tr>
+    <tr>
+        <td class="label capitalise"><b>TOTAL PASIVO Y PATRIMONIO</b></td>
+        <td><b>28,625,794</td>
+        <td><b>25,180,792</td>
+        <td><b>32,839,030</td>
+    </tr>
+    <tr class="row-comparative-empty">
+        <td colspan="4"></td>
+    </tr>
+    </table>
+    <tr>
+        <td class="label capitalise">Ventas Netas</td>
+        <td>21,300,005</td>
+        <td>16,344,723</td>
+        <td>12,705,879</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Costo ventas</td>
+        <td>-19,146,353</td>
+        <td>-13,375,368</td>
+        <td>-9,429,586</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultado Bruto</td>
+        <td>2,153,652</td>
+        <td>2,969,355</td>
+        <td>3,276,293</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Gastos Operacionales</td>
+        <td>-1,395,310</td>
+        <td>-1,351,929</td>
+        <td>-1,258,178</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultado de Operacion</td>
+        <td>758,342</td>
+        <td>1,617,426</td>
+        <td>2,018,115</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Gastos financieros</td>
+        <td>-342,886</td>
+        <td>-965,851</td>
+        <td>-988,206</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Ingresos financieros</td>
+        <td>556,739</td>
+        <td>2,089</td>
+        <td>1,929</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Otros Gastos</td>
+        <td>-1,335,296</td>
+        <td>-250,184</td>
+        <td>-555,808</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Otros Ingresos</td>
+        <td>1,064,528</td>
+        <td>804,684</td>
+        <td>569,943</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultados antes de impuestos</td>
+        <td>701,427</td>
+        <td>1,208,164</td>
+        <td>1,045,973</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Impuesto a la renta</td>
+        <td>-220,970</td>
+        <td>-184,901</td>
+        <td>-345,122</td>
+    </tr>
+    <tr>
+        <td class="label capitalise">Resultado neto del ejercicio</td>
+        <td>480,457</td>
+        <td>1,023,263</td>
+        <td>700,851</td>
+    </tr>
+    <tr class="row-comparative-empty">
+        <td colspan="4"></td>
+    </tr>
+    </table><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+            height="6" alt="top" border="0"></a></div>
+    </tr>
+    <tr id="header-financial-information">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="financial-information-anchor"></a>
+            <h2>Finanzas Parciales / Preliminares</h2><a class="collapse-expand"
+                href="javascript:doExpand('Finanzas Parciales','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA;butFinanzas"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="FinancialInformation" style="display:block;"><a name="BalPar-anchor"></a>
+                <h3>Balance Parcial (S/.)</h3>
+                <table class="table-comparative" width="650">
+                    <tr class="row-comparative-header">
+                        <td class="label capitalise">Activo</td>
+                        <td class="value"></td>
+                        <td class="value"></td>
+                        <td class="value">31/05/2015</td>
+                    </tr>
+                    <tr class="row-comparative-empty">
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Efectivo y equivalentes de efectivo</td>
+                        <td></td>
+                        <td></td>
+                        <td>1,630,863</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Cuentas x cobrar comerciales terceros</td>
+                        <td></td>
+                        <td></td>
+                        <td>2,261,001</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Cuentas x cobrar diversas terceros</td>
+                        <td></td>
+                        <td></td>
+                        <td>447,607</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Mercaderias</td>
+                        <td></td>
+                        <td></td>
+                        <td>458,222</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Diferidos</td>
+                        <td></td>
+                        <td></td>
+                        <td>157,784</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise"><b>ACTIVO CORRIENTE</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>4,955,477</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Inversiones mobiliarias e inmobiliarias</td>
+                        <td></td>
+                        <td></td>
+                        <td>15,161</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Inmuebles, maquinaria y equipo</td>
+                        <td></td>
+                        <td></td>
+                        <td>22,282,372</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Otras cuentas Activo no Corriente</td>
+                        <td></td>
+                        <td></td>
+                        <td>1,660,995</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise"><b>ACTIVO NO CORRIENTE</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>23,958,528</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise"><b>TOTAL ACTIVO</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>28,914,005</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Trib. y aportes al sist. pension y salud</td>
+                        <td></td>
+                        <td></td>
+                        <td>25,085</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Remuneraciones y participaciones</td>
+                        <td></td>
+                        <td></td>
+                        <td>148,384</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Cuentas x pagar comerciales terceros</td>
+                        <td></td>
+                        <td></td>
+                        <td>56,063</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Obligaciones financieras</td>
+                        <td></td>
+                        <td></td>
+                        <td>743,555</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Cuentas por pagar diversas terceros</td>
+                        <td></td>
+                        <td></td>
+                        <td>214,248</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Otras cuentas Pasivo Corriente</td>
+                        <td></td>
+                        <td></td>
+                        <td>2,712,803</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise"><b>PASIVO CORRIENTE</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>3,900,138</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Otras cuentas Pasivo no Corriente</td>
+                        <td></td>
+                        <td></td>
+                        <td>8,656,958</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise"><b>PASIVO NO CORRIENTE</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>8,656,958</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Capital social</td>
+                        <td></td>
+                        <td></td>
+                        <td>12,930,071</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Resultados acumulados</td>
+                        <td></td>
+                        <td></td>
+                        <td>2,807,919</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Resultados del ejercicio</td>
+                        <td></td>
+                        <td></td>
+                        <td>618,919</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">
+                            <b<PATRIMONIO< /td>
+                        <td></td>
+                        <td></td>
+                        <td><b>16,356,909</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise"><b>TOTAL PASIVO Y PATRIMONIO</td>
+                        <td></td>
+                        <td></td>
+                        <td><b>28,914,005</td>
+                    </tr>
+                    <tr class="row-comparative-empty">
+                        <td colspan="4"></td>
+                    </tr>
+                </table><a name="GanPar-anchor"></a>
+                <h3>Ganancias y Perdidas (S/.)</h3>
+                <table class="table-comparative" width="650">
+                    <tr class="row-comparative-header">
+                        <td class="label capitalise"></td>
+                        <td class="value"></td>
+                        <td class="value"></td>
+                        <td class="value">31/05/2015</td>
+                    </tr>
+                    <tr class="row-comparative-empty">
+                        <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Ventas Netas</td>
+                        <td></td>
+                        <td></td>
+                        <td>4,051,558</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Costo ventas</td>
+                        <td></td>
+                        <td></td>
+                        <td>-2,778,937</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Resultado Bruto</td>
+                        <td></td>
+                        <td></td>
+                        <td>1,272,621</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Gastos de Ventas</td>
+                        <td></td>
+                        <td></td>
+                        <td>-548,349</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Resultado de Operacion</td>
+                        <td></td>
+                        <td></td>
+                        <td>724,272</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Gastos financieros</td>
+                        <td></td>
+                        <td></td>
+                        <td>724,272</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Ingresos financieros</td>
+                        <td></td>
+                        <td></td>
+                        <td>1,735</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Otros Gastos</td>
+                        <td></td>
+                        <td></td>
+                        <td>-56,395</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Otros Ingresos</td>
+                        <td></td>
+                        <td></td>
+                        <td>136,450</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Resultados antes de impuestos</td>
+                        <td></td>
+                        <td></td>
+                        <td>618,919</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Resultado neto del ejercicio</td>
+                        <td></td>
+                        <td></td>
+                        <td>618,919</td>
+                    </tr>
+                    <tr class="row-comparative-empty">
+                        <td colspan="4"></td>
+                    </tr>
+                </table><a name="Indices-anchor"></a>
+                <h3>Indices Financieros (S/.)</h3>
+                <table class="table-comparative" width="650">
+                    <tr class="row-comparative-header">
+                        <td class="label"></td>
+                        <td class="value"> </td>
+                        <td class="value"> </td>
+                        <td class="value">31/05/2015</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Indice Corriente</td>
+                        <td></td>
+                        <td></td>
+                        <td>1.27:1</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Endeud. Patrimonial Cte.</td>
+                        <td></td>
+                        <td></td>
+                        <td>0.24:1</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Rentabilidad de las Ventas</td>
+                        <td></td>
+                        <td></td>
+                        <td>15.28 %</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Rentabilidad del Patrimonio</td>
+                        <td></td>
+                        <td></td>
+                        <td>3.78 %</td>
+                    </tr>
+                    <tr>
+                        <td class="label capitalise">Dependencia Financiera</td>
+                        <td></td>
+                        <td></td>
+                        <td>43.43 %</td>
+                    </tr>
+                    <tr class="row-comparative-empty">
+                        <td colspan="4"></td>
+                    </tr>
+                </table><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif"
+                        width="9" height="6" alt="top" border="0"></a>
+            </div>
+    </tr>
+    <tr id="header-finantial-information">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="comentarios-anchor"></a>
+            <h2>Consideraciones Especiales</h2><a class="collapse-expand"
+                href="javascript:doExpand('Consideraciones Especiales','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA; butConsideraciones Especiales"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="TradePayments" style="display:block;"><a name="comentarios-anchor"></a>
+                <h3>Comentarios</h3>
+                <table class="table-data-right">
+                    <p align="justify">La empresa, a la fecha, aún se encuentra en Etapa de Reestructuración ante
+                        INDECOPI, desde el 26 JUL 2004 hasta el 2015, sus principales acreedores son: Sunat, Bco. de
+                        Crédito (Perú), Caterpilar (USA) quienes conforman la Comisión de Acreedores y Reestructuración.
+                        El monto total de la Deuda Concursal al 31 MAY 2015 asciende a S/. 4,066,639 (Deuda Parte
+                        Corriente S/. 1,003,259; Largo Plazo S/. 3,063,380).</p>
+                    <p align="justify">El monto de</p>
+                    <p align="justify">Al 27 MAY 2015, SUNAT reporta Omiso a la presentación MAR 2013: IMP.TEMP. A LOS
+                        ACTIVOS NETOS, Fecha de Proceso 15 MAY 2015.</p>
+                    <p align="justify">Constructora Upacá S.A. es una empresa de ingeniería y construcción en el Perú de
+                        propiedad del grupo Piccini, con 49 años de actividad incesante en el ámbito de la construcción
+                        nacional e internacional. A lo largode éste período, la empresa ha desarrollado y ejecutado
+                        distintos proyectos en los siguientes campos de ingeniería: Saneamiento (Instalación de Tuberías
+                        de grandes diámetros en Agua Potable y Alcantarillado); Hidráulica (Canales y Obras de
+                        Irrigación); Viales (Carreteras y Movimientos de Tierras); Edificaciones (Residencial, Comercial
+                        y Servicios).</p>
+                    <p align="justify">Desarrollo Urbano, han realizado proyectos fuera de nuestras fronteras como:
+                        Ecuador, Panamá, Costa Rica, Bolivia. Cuenta con una flote de equipo de última generación,
+                        manteniendo altos estándares de acuerdo a las especificaciones de los fabricantes. Ofrece
+                        servicios a todas las empresas del país y del resto de Latinoamérica.</p>
+                </table>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    <tr id="header-appendices">
+        <td class="container-highlight">-</td>
+        <td class="container-border-header">-</td>
+        <td class="container-header"><a name="appendices-anchor"></a>
+            <h2>Apendices</h2><a class="collapse-expand" href="javascript:doExpand('Apendices','img/')"><img
+                    src="http://127.0.0.1:8080/dnb/images/negative-single-box-11px.gif" width="11" height="11"
+                    alt="Summarise" border="0" name="&#xA;butApendices"></a>
+        </td>
+    </tr>
+    <tr id="header-report">
+        <td class="container-spacer">-</td>
+        <td class="container-border">-</td>
+        <td class="container-content" style="padding-bottom:2px;">
+            <div id="Appendices" style="display:block;"><a name="CustSrv-anchor"></a>
+                <h3>Servicio al Cliente</h3>
+                <p align="justify">Si usted requiere cualquier informacion adicional o tiene cualquier pregunta, por
+                    favor contacte a su Centro de Servicio al Cliente local. Suscriptores de Peru, por favor contacten
+                    a:</p><br />
+                <p><b>Dun &amp; Bradstreet S.A.C </b></p>
+                <p>Av. La Encalada 1420 Oficina 802</p>
+                <p>Lima 33 - Peru</p>
+                <p>Tel: 51(1) 705-5100</p>
+                <p>Email:<a href="mailto:cliente@cialdnb.com">cliente@cialdnb.com</a></p>
+                <p>Website:<a href="https://www.cialdnb.com">www.cialdnb.com</a></p>
+                <div class="box-content">
+                    <p>Sus solicitudes <b>siempre</b> deben contener los siguientes minimos detalles, por favor:</p>
+                    <ul class="list-enquiry">
+                        <li>Nombre completo de la Compa&ntildeia</li>
+                        <li>Direccion Completa</li>
+                        <li>Numero telefonico</li>
+                        <li>RUC</li>
+                        <li>Nombre de un contacto</li>
+                        <li>Referencia</li>
+                        <li>Fecha de solicitud</li>
+                    </ul>
+                </div><a name="DNBRatGloss-anchor"></a>
+                <h3>Glosario del D&amp;B Rating</h3>
+                <p>Los siguientes ratings estan disponibles para las empresas en Peru:</p>
+                <p align="justify"><strong>D&amp;B Rating</strong> - The D&B&#174; Rating en Peru consiste en dos (02)
+                    partes, el Indicador de Capacidad Financiera y el Indicador de Riesgo.El Indicador de Capacidad
+                    Financiera basado en funcion al monto del Capital Contable mas reciente, segun los siguientes
+                    valores asignados por D&B para Peru. </p>
+                <h5>Indicador de Capacidad Financiera</h5>
+                <table class="table-data">
+                    <tr>
+                        <th></th>
+                        <th colspan="3">Rango US$</th>
+                        <th colspan="4">Composicion del Riesgo Crediticio</th>
+                    </tr>
+                    <tr>
+                        <th>Patrimonio Contable</th>
+                        <th>Capital Contable</th>
+                        <th>De</th>
+                        <th>A</th>
+                        <th>Solida</th>
+                        <th>Satisfactoria</th>
+                        <th>Aceptable</th>
+                        <th>Limitada</th>
+                    </tr>
+                    <tr>
+                        <td>5A</td>
+                        <td>5AA</td>
+                        <td>50,000,000</td>
+                        <td>O mas</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4A</td>
+                        <td>4AA</td>
+                        <td>10,000,000</td>
+                        <td>49,999,999</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3A</td>
+                        <td>3AA</td>
+                        <td>1,500,000</td>
+                        <td>9,999,999</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2A</td>
+                        <td>2AA</td>
+                        <td>750,000</td>
+                        <td>1,499,999</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>1A</td>
+                        <td>1AA</td>
+                        <td>375,000</td>
+                        <td>749,999</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>AA</td>
+                        <td>188,000</td>
+                        <td>374,999</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>BB</td>
+                        <td>94,000</td>
+                        <td>187,999</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>CC</td>
+                        <td>47,000</td>
+                        <td>93,999</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>DD</td>
+                        <td>24,000</td>
+                        <td>46,999</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>EE</td>
+                        <td>12,000</td>
+                        <td>23,999</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>FF</td>
+                        <td>6,000</td>
+                        <td>11,999</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>GG</td>
+                        <td>0</td>
+                        <td>5,999</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>O</td>
+                        <td colspan="6">Balance no disponible.</td>
+                    </tr>
+                </table>
+                <table class="table-data">
+                    <tr>
+                        <th>Riesgo Crediticio</th>
+                        <th>Condicion</th>
+                        <th>Indicador de Riesgo</th>
+                        <th>Interpretacion</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Solida</td>
+                        <td>Riesgo Minimo</td>
+                        <td>Proceder con la transaccion ofrecer terminos mas amplios en caso de ser requeridos</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Satisfactoria</td>
+                        <td>Bajo Riesgo</td>
+                        <td>Proceder con la transaccion</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Aceptable</td>
+                        <td>Levemente mayor que el riesgo promedio</td>
+                        <td>Proceder con la transaccion, pero monitorearlo en forma cercana</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Limitada</td>
+                        <td>Nivel de riesgo significativo</td>
+                        <td>Examine cada caso antes de extender el credito, obtenga mas informacion y analice otras
+                            opciones. Pida garantias si es necesario, debido a su alto riesgo</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>Entidades Financieras</td>
+                        <td>Dada la naturaleza del negocio, no se asigna nivel de riesgo</td>
+                        <td>Empresas que no solicitan credito en el curso normal de sus actividades (instituciones
+                            financieras, inversionistas, aseguradoras, escuelas, gobierno, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Indeterminada</td>
+                        <td>Riesgo Desconocido</td>
+                        <td>Informacion insuficiente</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">Un Indicador de Riesgo "S" solo se asigna en conjunto con un Indicador de
+                            Capacidad Financiera (ej. 5A-S, 4A-S, F-S, O-S)</td>
+                    </tr>
+                </table>
+                <p align="justify"><strong>Indicador de Riesgo</strong> - Se usa en conjunto con el Indicador de
+                    Capacidad Financiera. El Indicador de Riesgo refleja la opinion de D&amp;B sobre el riesgo asociado
+                    con un negocio especifico, la probabilidad de que dicho negocio continue o fracase en los proximos
+                    12 meses. </p>
+                <table class="table-data">
+                    <tr>
+                        <th colspan="2">Otros Ratings Posibles</th>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Informacion no disponible</td>
+                    </tr>
+                    <tr>
+                        <td>NB</td>
+                        <td>Nuevo Negocio: menos de 30 meses operando</td>
+                    </tr>
+                    <tr>
+                        <td>BR</td>
+                        <td>Sucursal nacional</td>
+                    </tr>
+                    <tr>
+                        <td>NQ</td>
+                        <td>Empresa fuera de negocio</td>
+                    </tr>
+                    <tr>
+                        <td>N4</td>
+                        <td>Capital contable negativo</td>
+                    </tr>
+                </table><a name="Confid-anchor"></a>
+                <h3>Confidencialidad</h3>
+                <p align="justify" class="modify-upper"><b>Confidencial</b>Esta informacion es proporcionada por
+                    Dun&amp;Bradstreet y esta sujeta a los terminos y condiciones de su contrato de suscripcion y no
+                    debe ser revelada.</p>
+                <ul class="list-confidentiality">
+                    <li class="logo"><img src="http://127.0.0.1:8080/dnb/images/dnb_wrldwide.jpg"
+                            alt="Dun &amp; Bradstreet Logo"></li>
+                    <li class="notes">&#169; Derechos Reservados 2023 Dun & Bradstreet. Todos los Derechos
+                        Reservados.Este informe esta autorizado para el uso exclusivo de los clientes de D&B, mediante
+                        un convenio, para su uso como un elemento de decision comercial.Contiene informacion recopilada
+                        de diversas fuentes sobre las que D&B no tiene control y las cuales, a menos que se indique lo
+                        contrario en este informe, no han sido verificadas.Dun & Bradstreet no asume parte alguna en sus
+                        riesgos de negocios; no garantiza la veracidad, integridad y vigencia de la informacion.En
+                        ningun caso D&B sera responsable por cualquier tipo de decision que resulte del uso de esta
+                        informacion, que cause danos, perdidas o perjuicios al cliente, aun si fuese causado por
+                        negligencia de esta organizacion.</li>
+                </ul>
+                <p align="justify" class="modify-upper clear-both"><b>Copyright &#169; 2023 Dun &amp; Bradstreet.</b>
+                    Este reporte no puede ser reproducido en su totalidad o en partes ni en ninguna forma o manera en
+                    absoluto.</p>
+            </div><a class="toTop" href="#top"><img src="http://127.0.0.1:8080/dnb/images/arrow-up-single.gif" width="9"
+                    height="6" alt="top" border="0"></a>
+        </td>
+    </tr>
+    </table>
+    </div>
+</body>
+
+</html>

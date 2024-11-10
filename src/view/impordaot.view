@@ -1,0 +1,89 @@
+{{ mc_View( 'app/header_tables.view' ) }}
+
+{{ mc_Css( 'edit.css' ) }}
+
+<body>
+
+    {{ mc_View( 'app/nav.view', 'Modulos' ) }}
+
+    <div class="content main ">
+
+        <div class="container_table">
+
+            <?prg
+	
+                #include {% TWebInclude() %}
+                            
+                local aParam := pValue(1)
+                local aHojas := pValue(2)
+                local o, oCol, oBrw 
+                local aGet := {=>}
+                local cFile:=''                
+                aGet['balance']:=''
+                aGet['tipo']:=''
+                aGet['hoja']:=''
+                aGet['posicion']:='0'
+
+                DEFINE FORM o
+                
+                    HTML o INLINE '<h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Informe Comercial</h3><hr>'
+                    
+                INIT FORM o
+
+                    o:cType     := 'md'     //  xs,sm,md,lg
+                    o:cSizing   := 'sm'     //  sm,lg                     
+                    
+                    COL o GRID 12 TYPE 'ml-1 lg'                        
+                        
+                        ROWGROUP o                    
+					                			                                            
+                            SELECT oSelect  id 'tipo'     VALUE  aGet['tipo']    LABEL 'Tipo' PROMPT 'Proveedores', 'Clientes' VALUES  'P', 'C'  GRID 4  OF o
+                            SELECT oSelect  id 'hoja'     VALUE  aGet['hoja']    LABEL 'Hoja' KEYVALUE aHojas Grid 4 OF o                            
+
+                        ENDROW o
+
+                        ROWGROUP o 
+
+                            COL o GRID 4 
+                            ENDCOL o
+                                                        
+                            BUTTON ID 'btnAceptar'   LABEL ' Aceptar' GRID 0 FILES ACTION 'FImporDaot()' ICON '<i class="fas fa-duotone fa-check"></i>'  OF o
+                            BUTTON ID 'btnSalir'     LABEL ' Salir ' GRID 1  FILES ACTION 'FSalir()' ICON '<i class="fas fal fa-times"></i>'  ALIGN 'left' OF o
+
+                            COL o GRID 4 
+				            ENDCOL o
+            
+                        ENDROW o                        
+                                                
+
+                    ENDCOL o
+
+                    HTML o PARAMS aParam, aHojas
+                        <script>
+                    					
+
+                        </script>
+
+                        {{ mc_JS( 'impordaot.js' ) }}
+                            
+                    ENDTEXT			
+		        END FORM o	RETURN
+	        ?>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var $table = $('#ringo')
+    $(function () {
+        $table.bootstrapTable()
+        $table.bootstrapTable('refreshOptions', {
+            locale: "es-SP",
+            classes: "table table-bordered table-hover table-striped",
+            iconSize: "sm"
+        })
+    })
+</script>

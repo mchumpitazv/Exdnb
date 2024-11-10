@@ -1,0 +1,97 @@
+{{ mc_View( 'app/header_tweb.view' ) }}	
+
+<style>
+
+	:root{
+	  --primary: #111B54;
+	  --light: #ffffff;
+	  --gray: #efefef;
+  
+	}
+  
+	.bg-primary{background-color: var(--primary) !important;}
+	.btn-primary{background-color: var(--primary) !important;}
+  	
+</style>
+
+<body class="bg-info d-flex">
+	<div>
+		<div>
+			<img src="{{ AppUrlImg() + 'login-icon.png' }}" alt="login-icon" style="height: 7rem;">			
+		</div>
+		<div>
+			Login
+		</div>
+		<div>
+			<div>
+				<img src="{{ AppUrlImg() + 'login-icon.png' }}" alt="login-icon" style="height: 1rem;">			
+			</div>
+			<input class="form-control" name="user" id="user" placeholder="Codigo" >
+
+		</div>
+		<div>
+			<div>
+				<img src="{{ AppUrlImg() + 'login-icon.png' }}" alt="login-icon" style="height: 1rem;">			
+			</div>
+			<input class="form-control" type="password" name="psw" id="psw" placeholder="Contrase&ntilde;a" > 
+		</div>
+		<div>
+			Login
+		</div>
+	</div>
+	
+		
+
+	<nav class="navbar navbar-dark bg-primary">
+	  <a class="navbar-brand" href="#">Login</a>
+	</nav>							
+
+		<div class="justify-content-center p-5" align="center">			
+			
+			<div class="mb-3">
+				<label for="user">Usuario</label><br>
+				<input style="max-width:200px;" class="form-control text-center" name="user" id="user" placeholder="Codigo" >
+			</div>
+	
+			
+			<br>
+				
+			<div class="mb-3">
+				<label for="psw">Password</label><br>
+				<input style="max-width:200px;" class="form-control text-center" type="password" name="psw" id="psw" placeholder="Contrase&ntilde;a" > 
+			</div>
+			
+			<br><br>
+			
+			<button class="btn btn-primary" style="width:200px;" onclick="Login()" value="Login"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; Login</button>
+			
+		</div>
+
+	
+	<script>
+	
+		function Login() {
+		
+			var cUrl = '{{ mc_Route( 'app.auth' ) }}'
+			var oParam 	= new Object()						
+				oParam[ 'user']	= $('#user').val()
+				oParam[ 'psw'] 	= $('#psw').val()
+			
+				MsgServer( cUrl, oParam, Post_Login )		
+		}
+		
+		function Post_Login( dat ){
+			
+			if (dat.success){
+				var cUrl = '{{ mc_Route( 'default' ) }}'
+				window.location.replace( cUrl )
+			} else {
+				MsgError( dat.error, "Mensaje" )
+			}		
+		}		
+	
+	</script>
+	
+</body>
+</html>
+	

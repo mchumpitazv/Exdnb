@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">		
+<head>
+
+	<title>{{ mc_GetApp():cTitle }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="{{ AppUrlImg() + 'dnb.png' }}"/>
+
+  
+	<!-- TWEB - Libs JQuery and bootstrap are loaded from TWeb -->
+	
+	{{ LoadTWeb( AppUrlLib() + 'tweb' ) }}
+	
+	
+	<!-- Fonts Awesome 4.7 -->
+	
+	<link rel="stylesheet" href="{{ AppUrlCss() + 'font-awesome-4.7.0/css/font-awesome.min.css' }}">
+	
+</head>
+
+
+  
+
+<style>
+
+	.main {	
+		
+		bottom: 0;
+		position: absolute;
+		top: 55px;
+		width: 100%;			
+	}
+	
+	.red { border:2px solid red; }
+	.green { border:2px solid green; }
+	.blue { border:2px solid blue; }
+	
+	
+	/*	Center Dialog edit --------------	*/
+	
+		.modal-open .modal {
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+		}	
+	
+	/*	--------------------------------	*/
+			
+	
+	@media (max-width: 420px) {  
+		.table-sm {
+			font-size:12px !important;
+		}
+	}		
+</style>	

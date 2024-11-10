@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">		
+<head>
+
+	<title>{{ mc_GetApp():cTitle }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="{{ AppUrlImg() + 'mini-mercury.png' }}"/>
+	
+	<link rel="stylesheet" href="lib/bootstrap520/css/bootstrap.min.css">
+	<script type="text/javascript" src="lib/jquery-3.6.0.min.js"></script>
+	<script src="lib/bootstrap520/js/bootstrap.bundle.min.js"></script>	
+
+	<meta charset="utf-8">
+	<!-- Fonts Awesome 4.7 -->
+	
+	<link rel="stylesheet" href="{{ AppUrlCss() + 'font-awesome-4.7.0/css/font-awesome.min.css' }}">	
+	
+	
+</head>
+
+<style>
+
+	.main {	
+			
+		bottom: 0;
+		position: absolute;
+		top: 55px;
+		width: 100%;			
+	}
+	
+	.red { border:2px solid red; }
+	.green { border:2px solid green; }
+	.blue { border:2px solid blue; }
+	
+	@media (max-width: 420px) {  
+		.table-sm {
+			font-size:12px !important;
+		}
+	}		
+</style>	

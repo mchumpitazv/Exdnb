@@ -1,0 +1,199 @@
+<div class="content main ">
+
+	<div class="container_table">			
+	
+	<?prg
+	
+		#include {% TWebInclude() %}
+				
+        local hParam := pValue(1)
+        local hDataString := pValue(2)
+        local hDataDatos := pValue(3)
+		local hDataLista1 := pValue(4)		  
+		local o, oCol, oBrw		
+		local dato:=''
+		local aInicia:={}
+		local aexist := hParam['exist']
+
+		DEFINE FORM o
+
+			o:lDessign := .F.
+		
+			HTML o INLINE '<h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Informe Comercial</h3><hr>'
+			
+		INIT FORM o
+
+            o:cType     := 'md'     //  xs,sm,md,lg
+			o:cSizing   := 'sm'     //  sm,lg
+
+			for d:=1 to len(hDataDatos)
+				dato += AllTrim(hDataDatos[d]['DATO'])
+			Next			
+			
+			HTML o
+
+                    <!-- Ventana Modal -->
+                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="pickTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg modal-sm"  role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pickTitle">Seccion</h5>							
+							<!-- Activar la "X" para cerrar ventana Modal 	
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+							-->
+                          </div>
+
+                          <div class="modal-body">
+
+            ENDTEXT
+
+			ROW o
+				for i:= 1 to len(hDataString)
+				//for i:= 1 to 1
+					hValueLista1:={=>}					
+					fila := hDataString[i]
+					vid := 'id' + AllTrim(hDataString[i]['CAMPO'])
+					SAY value hDataString[i]['DESC'] Grid 6 Font 'Bold' OF o
+
+					// Verificar si campo tiene valor Recopilado
+					valorexist := ''
+					for x:=1 to len(aexist)
+						if (i = aexist[x][4])							
+							if !empty(aexist[x][3])
+								if empty(aexist[x][5]) // si es tipo cadena
+									valorexist += aexist[x][3] + ' '
+								else // tipo numero
+									valorexist := str(val(valorexist) + val(aexist[x][3]))
+								endif
+							endif
+						endif 
+					next
+					
+					pos_at := at('æ'+AllTrim(hDataString[i]['CAMPO']),dato)
+					do case
+						case hDataString[i]['TIPO'] = 'C'
+							valor:=''
+							if pos_at > 0
+								valor := IniciaGet(fila, pos_at, dato)							
+							endif
+							if !empty(valorexist)
+								valor := alltrim(valorexist)
+							endif							
+							If hDataString[i]['LONG'] >= 60
+								Get oGet MEMO id vid VALUE valor Grid 6 ROWS 2 OF o
+							else
+								Get oGet id vid VALUE valor Grid 6 OF o
+							endif
+						case hDataString[i]['TIPO'] = 'N'
+							valor := ''
+							if pos_at > 0
+								valor := IniciaGet(fila, pos_at, dato)							
+							endif
+							if !empty(valorexist)
+								valor := valorexist
+							endif
+							Get oGet id vid VALUE valor Grid 6 Type 'number' Align 'right' OF o
+						case hDataString[i]['TIPO'] = 'D'
+							valor:= ''
+							if pos_at > 0
+								valor := IniciaGet(fila, pos_at, dato)							
+							endif
+							if !empty(valorexist)
+								valor := valorexist
+							endif
+							Get oGet id vid VALUE valor Grid 6 Type 'date' OF o
+						case hDataString[i]['TIPO'] = 'T'
+							valor:=''
+							if pos_at > 0
+								valor := IniciaGet(fila, pos_at, dato)							
+							endif
+
+							// Extaer valores de Lista
+							
+							For l:=1 to len(hDataLista1)
+								If hDataLista1[l]['NOMBRE'] = hDataString[i]['TABLA']
+									hValueLista1[ hDataLista1[l]['CLAVE'] ] := hDataLista1[l]['DESCRIP']									
+								Endif
+							next							
+							SELECT oSelect id vid VALUE valor KEYVALUE hValueLista1 Grid 6 OF o
+					endcase
+				next
+
+			ENDROW o
+
+			HTML o
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" id="btnClose" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+                            <button type="button" id="btnSave" class="btn btn-primary btn-sm" >Grabar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                    
+            ENDTEXT
+
+            HTML o PARAMS hParam, hDataString, hDataDatos, dato, aInicia  // Pasar variables de PRG a JS
+		
+				<script>
+                    					
+
+				</script>
+
+				{{ mc_JS( 'secdat_upd.js' ) }}
+						
+			ENDTEXT			
+		
+		END FORM o	RETURN
+		
+		Function IniciaGet(fila,pos_at,dato)
+			local campo:=''
+			local extracto:=''
+			local posi:=0
+			local aInicia:={}			
+			campo := AllTrim(fila['CAMPO'])
+			do case
+				case fila['TIPO'] = 'C' .or. fila['TIPO'] = 'T'
+					valor := ''					
+					posi:=AT( "æ", RIGHT( dato, LEN(dato) - (pos_at + LEN(campo) + 2)))
+					extracto := SUBSTR( dato, pos_at + (LEN(campo)+2), posi )
+					//valor := extracto + REPLICATE(" ", fila['LONG'] - LEN(AllTrim( extracto)))
+					valor:=extracto
+				case fila['TIPO'] = 'N'
+					valor:=''
+					posi := AT( "æ", RIGHT( dato, LEN(dato) - (pos_at + LEN(campo) + 2)))
+					extracto := SUBSTR( dato, pos_at + (LEN(campo)+2), posi )
+					valor := extracto
+				case fila['TIPO'] = 'D'
+					valor:=''
+					posi := AT( "æ", RIGHT( dato, LEN(dato) - (pos_at + LEN(campo) + 2)))
+					extracto := SUBSTR( dato, pos_at + (LEN(campo)+2), posi )
+					valor := right(extracto,4) + "-" + substr(extracto,4,2)+ "-" + left(extracto,2)
+			endcase
+			
+			/*
+			// Lineas a usar cuando queremos verificar el resultado obtenido
+
+			Aadd( aInicia, {'pos_at' => pos_at,;
+				'lencampo' => len(campo)+2,;
+				'operacion' => LEN(dato) - pos_at - (LEN(campo)+2),;
+				'right' => RIGHT( dato, LEN(dato) - pos_at - (LEN(campo)+2)),;
+				'posi' => posi,;
+                'lendato' => len(dato),;
+				'extracto' => extracto,;
+                'valor' => valor,;
+				'tipo' => valtype(valor),;
+				'fila' => fila;
+            })
+
+			return(aInicia)
+			*/
+			
+
+
+		return(valor)
+	?>
+	
+	</div>	

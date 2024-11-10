@@ -1,0 +1,150 @@
+{{ mc_View( 'app/header_tables.view' ) }}
+
+{{ mc_Css( 'edit.css' ) }}
+
+<body>
+
+	{{ mc_View( 'app/nav.view', 'Modulo Local' ) }}
+
+	<div class="content main ">
+
+		<div class="container_table">
+
+			<?prg
+	
+		#include {% TWebInclude() %}
+		
+		//local aRows := pValue(1)
+		local o, oCol, oBrw
+		local aGet := {=>}
+		aGet['proceso']:=''
+
+		DEFINE FORM o
+		
+			HTML o INLINE '<h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Informe Comercial</h3><hr>'
+			
+		INIT FORM o  
+
+			o:cType     := 'md'     //  xs,sm,md,lg
+			o:cSizing   := 'sm'     //  sm,lg
+
+			DIV o ID 'bar' CLASS 'btn-group'
+				BUTTON LABEL ' Editar' 	 ICON '<i class="fa fa-pencil" aria-hidden="true"></i>'  ACTION 'DunsEdit()' CLASS 'btn-secondary mybtnbar' GRID 0 OF o
+				BUTTON LABEL ' Crear' 	 ICON '<i class="fa fa-plus" aria-hidden="true"></i>' 	 ACTION 'DunsNew()'  CLASS 'btn-secondary mybtnbar' GRID 0 OF o
+				BUTTON LABEL ' Importar' ICON '<i class="fa fa-share" aria-hidden="true"></i>' 	 ACTION 'DunsImport()' 	 CLASS 'btn-secondary mybtnbar' GRID 0 OF o
+
+			ENDDIV o
+
+			HTML o 
+			
+				<div class="input-group">
+				  <input id="search" type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+				  
+				  <div class="input-group-append">				   					
+					<span id="search_total" class="input-group-text" id="inputGroup-sizing-default">0</span>
+					<button id="search_btn" type="button" class="btn btn-outline-secondary" onclick="Load2()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Busqueda</button>
+					<span id="search_name" class="input-group-text" id="inputGroup-sizing-default"></span>
+					<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+					<div class="dropdown-menu">
+                      <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'RUC' )">Ruc</a>
+					  <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'DUNSNUM' )">DUNS</a>
+					  <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'NOMBRE' )">Empresa</a>					  					 
+					</div>
+				  </div>
+				</div>					
+			
+			ENDTEXT
+					
+			HTML o
+
+                    <!-- Ventana Modal -->
+                    <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="pickTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg modal-sm"  role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pickTitle">Seleccion</h5>							
+							<!-- Activar la "X" para cerrar ventana Modal 	
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+							-->
+                          </div>
+
+                          <div class="modal-body">
+
+            ENDTEXT
+
+			ROWGROUP o                    
+					                			    
+				BUTTON ID 'myupload' LABEL ' Excel' GRID 4 FILES ACTION 'loadFile()' ICON '<i class="fas fa-cloud-upload-alt"></i>'  OF o
+				SAY ID 'namexls' VALUE 'Archivo Excel ' GRID 6 OF o
+            
+            ENDROW o
+
+			ROWGROUP o       
+					                
+			    SELECT oSelect  ID 'proceso'  VALUE  aGet['proceso'] LABEL 'Importar' PROMPT 'Balance', 'DAOT', 'Cuadro SQR' VALUES  'B', 'D', 'S'  GRID 12  OF o				
+            
+            ENDROW o
+
+			HTML o
+						  </div>
+						  <div class="modal-footer">
+						  	<button type="button" id="btnClose" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+						  	<button type="button" id="btnAccept" class="btn btn-primary btn-sm" >Aceptar</button>
+						  </div>
+					    </div>
+					  </div>
+				    </div>
+
+            ENDTEXT
+
+			DEFINE BROWSE oBrw ID 'ringo' SELECT CLICKSELECT HEIGHT 400 ;
+				EDIT UNIQUEID 'ruc' TITLE '<i class="fas fa-pencil"></i> Modificacion...' POSTEDIT 'TestPostEdit' ;
+				ROWSTYLE 'MyRowStyle' ;
+				TOOLBAR "bar" ;				
+				PAGINATION URL '/exdnb/src/controller/dunsPag.prg' USERINTERMEDIATE ;
+				OF o
+
+				oBrw:lStripped := .t.
+				oBrw:cLocale := 'es-ES'							
+				
+				ADD oCol TO oBrw ID 'RUC' 	    HEADER 'RUC'
+				ADD oCol TO oBrw ID 'DUNSNUM'  	HEADER 'DUNS'  		
+				ADD oCol TO oBrw ID 'NOMBRE'  	HEADER 'Empresa'				
+															
+			INIT BROWSE oBrw			
+
+			HTML o 
+		
+				<script>
+
+					const URL_ROUTE = '{{ mc_route('d.action') }}'
+
+				</script>
+
+				{{ mc_JS( 'duns.js' ) }}
+						
+			ENDTEXT			
+		
+		END FORM o	RETURN
+	?>
+
+		</div>
+
+
+</body>
+
+</html>
+
+<script>
+	var $table = $('#ringo')
+	$(function () {
+		$table.bootstrapTable()
+		$table.bootstrapTable('refreshOptions', {
+			locale: "es-SP",
+			classes: "table table-bordered table-hover table-striped",
+			iconSize: "sm"
+		})
+	})
+</script>

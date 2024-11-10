@@ -1,0 +1,87 @@
+{{ mc_View( 'app/header_tables.view' ) }}
+
+{{ mc_Css( 'edit.css' ) }}
+
+<body>
+
+  {{ mc_View( 'app/nav.view', 'Modulos' ) }}
+
+  <div class="content main ">
+
+    <div class="container_table">			
+    
+      <?prg
+      
+        #include {% TWebInclude() %}
+            
+        local aParam := pValue(1)
+        local aRows := pValue(2)    
+        local o, oCol, oBrw
+        local hDataString := {}
+        local hDataDatos :={}
+        local hDataLista1 := {}
+
+
+        DEFINE FORM o
+        
+          HTML o INLINE '<h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Informe Comercial</h3><hr>'
+          
+          INIT FORM o
+
+            o:cType     := 'md'     //  xs,sm,md,lg
+            o:cSizing   := 'sm'     //  sm,lg
+
+            ROW o
+                COL o GRID 6
+                        
+                    DIV o ID 'bar' CLASS 'btn-group'
+                        BUTTON LABEL ' Editar' 	ICON '<i class="far fa-edit" aria-hidden="true"></i>' ACTION 'editRow()'  CLASS 'btn-secondary mybtnbar' GRID 0 OF o
+                        SWITCH ID 'switch' VALUE .F. LABEL 'Recopilar Informacion' OF o
+                    ENDDIV o                                       
+
+                    //DEFINE BROWSE oBrw ID 'ringo' SELECT CLICKSELECT HEIGHT 400 DBLCLICK 'editRow' OF o
+                    DEFINE BROWSE oBrw ID 'ringo' SELECT CLICKSELECT HEIGHT 400;
+                    TOOLBAR "bar" ; 
+                    OF o
+
+                        oBrw:lStripped := .t.
+                        oBrw:cLocale := 'es-ES'							
+                            
+                        ADD oCol TO oBrw ID 'SECCION' 	HEADER 'Codigo'  WIDTH 70
+                        ADD oCol TO oBrw ID 'NOMBRE'  	HEADER 'Seccion' ALIGN 'center'
+                        ADD oCol TO oBrw ID 'EXISTE'  	HEADER 'Datos'	 ALIGN 'center'	WIDTH 50  FORMATTER 'checkFormatter'
+                                                                        
+                    INIT BROWSE oBrw DATA aRows
+                ENDCOL o                                  
+            ENDROW o
+
+            HTML o PARAMS aParam  // Pasar variable de PRG a JS
+                      
+                <script>
+                    
+                    const URL_ROUTE = '{{ mc_route('d.action') }}'                    
+
+                </script>
+
+                {{ mc_JS( 'duns_upd.js' ) }}
+                      
+            ENDTEXT			
+        
+        END FORM o	RETURN
+      ?>			
+    </div>		
+  </div>
+</body>
+</html>
+
+<script>
+  var $table = $('#ringo')
+  $(function() {
+    $table.bootstrapTable()
+    $table.bootstrapTable('refreshOptions', {
+        locale: "es-SP" ,
+	classes:"table table-bordered table-hover table-striped" ,
+	iconSize: "sm"
+      }) 
+})
+</script>

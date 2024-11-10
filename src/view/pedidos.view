@@ -1,0 +1,107 @@
+{{ mc_View( 'app/header_tables.view' ) }}
+
+{{ mc_Css( 'edit.css' ) }}
+
+<body>
+
+{{ mc_View( 'app/nav.view', 'Modulo Local' ) }}
+
+<div class="content main ">
+
+	<div class="container_table">			
+	
+	<?prg
+	
+		#include {% TWebInclude() %}
+		
+		//local aRows := pValue(1)
+		local o, oCol, oBrw
+
+		DEFINE FORM o
+		
+			HTML o INLINE '<h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Relacion de Tickets</h3><hr>'
+			
+		INIT FORM o  
+
+			DIV o ID 'bar' CLASS 'btn-group'
+				BUTTON LABEL ' Reporte HTML' ICON '<i class="fa fa-html5" aria-hidden="true"></i>' 	ACTION 'ImpHtml()'  CLASS 'btn-secondary mybtnbar' GRID 0 OF o				
+
+			ENDDIV o
+
+			HTML o 
+			
+				<div class="input-group">
+				  <input id="search" type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+				  
+				  <div class="input-group-append">				   					
+					<span id="search_total" class="input-group-text" id="inputGroup-sizing-default">0</span>
+					<button id="search_btn" type="button" class="btn btn-outline-secondary" onclick="Load()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Busqueda</button>
+					<span id="search_name" class="input-group-text" id="inputGroup-sizing-default"></span>
+					<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+					<div class="dropdown-menu">
+                      <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'CODIGO' )">Codigo</a>
+                      <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'RUC' )">Ruc</a>
+					  <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'DUNS' )">DUNS</a>
+					  <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'NOMBRE' )">Empresa</a>
+                      <a class="dropdown-item" href="#" onclick="Search_Select_Tag( 'SUSCRIPTOR' )">Suscriptor</a>
+					</div>
+				  </div>
+				</div>					
+			
+			ENDTEXT			
+
+			DEFINE BROWSE oBrw ID 'ringo' SELECT CLICKSELECT HEIGHT 400 ;
+				EDIT UNIQUEID 'codigo' TITLE '<i class="fas fa-recycle"></i> Imprimir...';
+				ROWSTYLE 'MyRowStyle' ;
+				TOOLBAR "bar" ;
+				PAGINATION URL '/exdnb/src/controller/pedidosPag.prg' USERINTERMEDIATE ;
+				OF o
+
+				oBrw:lStripped := .t.
+				oBrw:cLocale := 'es-ES'							
+				
+				ADD oCol TO oBrw ID 'CODIGO' 	    HEADER 'Codigo'
+                ADD oCol TO oBrw ID 'SUSCRIPTOR' 	HEADER 'Suscriptor'
+                ADD oCol TO oBrw ID 'CONTRATO' 	    HEADER 'Contrato'
+                ADD oCol TO oBrw ID 'RUC' 	        HEADER 'RUC'
+				ADD oCol TO oBrw ID 'DUNS_PED'      HEADER 'DUNS'  		
+				ADD oCol TO oBrw ID 'NOMBRE'  	    HEADER 'Empresa'
+                ADD oCol TO oBrw ID 'FECHA_PED'     HEADER 'Fecha Pedido' EDIT TYPE 'D'
+                ADD oCol TO oBrw ID 'PRODUCTO' 	    HEADER 'Producto'
+															
+			INIT BROWSE oBrw
+
+			HTML o 
+		
+				<script>
+
+					const URL_ROUTE = '{{ mc_route('p.action') }}' 										
+				
+				</script>
+                
+                
+				{{ mc_JS( 'pedidos.js' ) }}
+               
+						
+			ENDTEXT			
+		
+		END FORM o	RETURN
+	?>			
+	
+	</div>	
+	
+
+</body>
+</html>
+
+<script>
+  var $table = $('#ringo')
+  $(function() {
+    $table.bootstrapTable()
+    $table.bootstrapTable('refreshOptions', {
+        locale: "es-SP" ,
+	classes:"table table-bordered table-hover table-striped" ,
+	iconSize: "sm"
+      }) 
+})
+</script>

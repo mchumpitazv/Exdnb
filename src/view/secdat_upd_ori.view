@@ -1,0 +1,129 @@
+{{ mc_View( 'app/header_tables.view' ) }}
+
+{{ mc_Css( 'edit.css' ) }}
+
+<body>
+
+{{ mc_View( 'app/nav.view', 'Edicion' ) }}
+
+<div class="content main ">
+
+	<div class="container_table">			
+	
+	<?prg
+	
+		#include {% TWebInclude() %}
+				
+        local aParam := pValue(1)
+        local aDataString := pValue(2)
+        local aDataDatos := pValue(3)
+		local aDataLista1 := pValue(4)		  
+		local o, oCol, oBrw
+
+		DEFINE FORM o
+
+			o:lDessign := .T.
+		
+			HTML o INLINE '<h3><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;Informe Comercial</h3><hr>'
+			
+		INIT FORM o
+
+            o:cType     := 'md'     //  xs,sm,md,lg
+			o:cSizing   := 'sm'     //  sm,lg
+
+			
+
+			HTML o
+
+                    <!-- Ventana Modal -->
+                    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="pickTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg modal-sm"  role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="pickTitle">Seccion</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
+                          <div class="modal-body">
+
+            ENDTEXT
+
+			ROW o
+				for i:= 1 to len(aDataString)
+					aValueLista1 :={}
+					aPromptLista1 :={}
+					vid := 'id' + aDataString[i]['CAMPO']
+					SAY value aDataString[i]['DESC'] Grid 6 Font 'Bold' OF o
+
+					do case
+						case aDataString[i]['TIPO'] = 'C'
+							If aDataString[i]['LONG'] >= 60
+								Get oGet MEMO id vid Grid 6 ROWS 2 OF o
+							else
+								Get oGet id vid Grid 6 OF o
+							endif
+						case aDataString[i]['TIPO'] = 'N'
+							Get oGet id vid Grid 6 Type 'number' Align 'right' OF o
+						case aDataString[i]['TIPO'] = 'D'
+							Get oGet id vid Grid 6 Type 'date' OF o
+						case aDataString[i]['TIPO'] = 'T'
+
+							// Extaer valores de Lista
+							
+							For l:=1 to len(aDataLista1)
+								If aDataLista1[l]['NOMBRE'] = aDataString[i]['TABLA']
+									aadd(aValueLista1, aDataLista1[l]['CLAVE'])
+									aadd(aPromptLista1, aDataLista1[l]['DESCRIP'])
+								Endif
+							next
+							SELECT oSelect id vid PROMPT aPromptLista1  VALUES aValueLista1 Grid 6 OF o							
+					endcase
+				next
+
+			ENDROW o
+
+			HTML o
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" id="btnClose" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
+                            <button type="button" id="btnSave" class="btn btn-primary btn-sm">Grabar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                    
+            ENDTEXT
+
+            HTML o PARAMS aParam, aDataString, aDataDatos  // Pasar variables de PRG a JS
+		
+				<script>
+                    					
+
+				</script>
+
+				{{ mc_JS( 'secdat_upd.js' ) }}
+						
+			ENDTEXT			
+		
+		END FORM o	RETURN
+	?>			
+	
+	</div>	
+	
+
+</body>
+</html>
+
+<script>
+  var $table = $('#ringo')
+  $(function() {
+    $table.bootstrapTable()
+    $table.bootstrapTable('refreshOptions', {
+        locale: "es-SP" ,
+	classes:"table table-bordered table-hover table-striped" ,
+	iconSize: "sm"
+      }) 
+})
+</script>

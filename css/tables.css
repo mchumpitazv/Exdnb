@@ -1,0 +1,37 @@
+.container {
+	width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.container_table { 
+
+	/*border: 5px solid yellow;*/
+	bottom: 10px;
+	top: 10px;
+	position: absolute;
+	right: 5px;
+	left: 5px;
+	overflow: hidden;
+}
+
+.myid {
+	background-color: lightgray;
+	font-weight: bold;
+	text-align: center;
+	border-left: 2px solid gray !important;
+	border-right: 2px solid gray !important;
+	border-top: 0px solid !important;
+	border-bottom: 0px solid !important;
+}
+
+.mybtnbar {
+	border-radius:0px;
+}
+
+.myrow {
+	background-color: #ff000040;
+	color: black;
+	border: 2px solid #e91e1e;
+	font-weight: bold;
+}	

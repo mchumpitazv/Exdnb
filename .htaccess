@@ -1,0 +1,27 @@
+# --------------------------------------------------------------------------
+# Load init process...
+# --------------------------------------------------------------------------
+SetEnv MH_MINIMALVERSION 	2.1.005
+
+# --------------------------------------------------------------------------
+# CONFIGURACION RUTAS PROGRAMA (Relative to DOCUMENT_ROOT)
+# --------------------------------------------------------------------------
+SetEnv PATH_DATA "/peru/database/"
+
+# --------------------------------------------------------------------------
+# Impedir que lean los ficheros del directorio
+# --------------------------------------------------------------------------
+Options All -Indexes
+
+# --------------------------------------------------------------------------
+# Pagina por defectos
+# --------------------------------------------------------------------------
+DirectoryIndex index.prg
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.prg/$1 [L]
+</IfModule>
+
