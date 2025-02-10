@@ -16,7 +16,7 @@
 
 <body>
 
-{{ mc_View( 'app/nav.view', 'Tables' ) }}
+{{ mc_View( 'app/nav.view', '' ) }}
 
 <div class="content main ">
 

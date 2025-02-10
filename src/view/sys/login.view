@@ -14,76 +14,79 @@
   	
 </style>
 
-<body class="bg-info d-flex">
-	<div>
-		<div>
-			<img src="{{ AppUrlImg() + 'login-icon.png' }}" alt="login-icon" style="height: 7rem;">			
-		</div>
-		<div>
-			Login
-		</div>
-		<div>
-			<div>
-				<img src="{{ AppUrlImg() + 'login-icon.png' }}" alt="login-icon" style="height: 1rem;">			
-			</div>
-			<input class="form-control" name="user" id="user" placeholder="Codigo" >
-
-		</div>
-		<div>
-			<div>
-				<img src="{{ AppUrlImg() + 'login-icon.png' }}" alt="login-icon" style="height: 1rem;">			
-			</div>
-			<input class="form-control" type="password" name="psw" id="psw" placeholder="Contrase&ntilde;a" > 
-		</div>
-		<div>
-			Login
-		</div>
-	</div>
-	
+<body class="bg-info">
 		
-
-	<nav class="navbar navbar-dark bg-primary">
-	  <a class="navbar-brand" href="#">Login</a>
-	</nav>							
-
-		<div class="justify-content-center p-5" align="center">			
-			
-			<div class="mb-3">
-				<label for="user">Usuario</label><br>
-				<input style="max-width:200px;" class="form-control text-center" name="user" id="user" placeholder="Codigo" >
+	<section style="background-color: #9A616D;">
+		<div class="container py-5 h-100">
+		  <div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col col-xl-10">
+			  <div class="card" style="border-radius: 1rem;">
+				<div class="row g-0">
+				  <div class="col-md-6 col-lg-5 d-none d-md-block">
+					<img src="{{ AppUrlImg() + 'login.webp' }}" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" /> 
+					<!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp" 
+					  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" /> -->
+				  </div>
+				  <div class="col-md-6 col-lg-7 d-flex align-items-center">
+					<div class="card-body p-4 p-lg-5 text-black">
+	  
+					  <!-- <form method="POST"> -->
+	  
+						<div class="d-flex align-items-center mb-3 pb-1">
+						  <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+						  <span class="h1 fw-bold mb-0">Logo</span>
+						</div>
+	  
+						<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+	  
+						<div data-mdb-input-init class="form-outline mb-4">
+						  <input style="max-width:200px;" class="form-control form-control-lg" name="user" id="user" placeholder="Codigo" >							  
+						  <label class="form-label">Codigo de Usuario</label>
+						</div>
+	  
+						<div data-mdb-input-init class="form-outline mb-4">
+						  <input style="max-width:200px;" class="form-control form-control-lg" type="password" name="psw" id="psw" placeholder="Contrase&ntilde;a" > 						  
+						  <label class="form-label">Password</label>
+						</div>
+	  
+						<div class="pt-1 mb-4">
+						  <button  data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" style="width:200px;" onclick="Login()" value="Login"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; Login</button>
+						</div>
+	  						
+						<a href="#!" class="small text-muted">Terms of use.</a>
+						<a href="#!" class="small text-muted">Privacy policy</a>
+					  <!-- </form> -->
+					</div>
+				  </div>
+				</div>
+			  </div>
 			</div>
-	
-			
-			<br>
-				
-			<div class="mb-3">
-				<label for="psw">Password</label><br>
-				<input style="max-width:200px;" class="form-control text-center" type="password" name="psw" id="psw" placeholder="Contrase&ntilde;a" > 
-			</div>
-			
-			<br><br>
-			
-			<button class="btn btn-primary" style="width:200px;" onclick="Login()" value="Login"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; Login</button>
-			
+		  </div>
 		</div>
-
+	</section>							
+  
 	
+	  		
 	<script>
 	
 		function Login() {
 		
 			var cUrl = '{{ mc_Route( 'app.auth' ) }}'
-			var oParam 	= new Object()						
-				oParam[ 'user']	= $('#user').val()
-				oParam[ 'psw'] 	= $('#psw').val()
+			var oParam 	= new Object()
+			console.log(cUrl)
+			oParam[ 'user']	= $('#user').val()
+			oParam[ 'psw'] 	= $('#psw').val()
+			console.log("login")
+			console.log(oParam)
 			
-				MsgServer( cUrl, oParam, Post_Login )		
+			MsgServer( cUrl, oParam, Post_Login )		
 		}
 		
 		function Post_Login( dat ){
 			
 			if (dat.success){
 				var cUrl = '{{ mc_Route( 'default' ) }}'
+				console.log(cUrl)
 				window.location.replace( cUrl )
 			} else {
 				MsgError( dat.error, "Mensaje" )
