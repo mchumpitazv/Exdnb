@@ -29,9 +29,9 @@
 			o:cSizing   := 'sm'     //  sm,lg
 
 			DIV o ID 'bar' CLASS 'btn-group'
-				BUTTON LABEL ' Editar' 	 ICON '<i class="fa fa-pencil" aria-hidden="true"></i>'  ACTION 'DunsEdit()' CLASS 'btn-secondary mybtnbar' GRID 0 OF o
-				BUTTON LABEL ' Crear' 	 ICON '<i class="fa fa-plus" aria-hidden="true"></i>' 	 ACTION 'DunsNew()'  CLASS 'btn-secondary mybtnbar' GRID 0 OF o
-				BUTTON LABEL ' Importar' ICON '<i class="fa fa-share" aria-hidden="true"></i>' 	 ACTION 'DunsImport()' 	 CLASS 'btn-secondary mybtnbar' GRID 0 OF o
+				BUTTON LABEL ' Editar' 	 ICON '<i class="fa fa-pencil" aria-hidden="true"></i>'  ACTION 'DunsEdit()' CLASS 'btn-success mybtnbar' GRID 0 OF o
+				BUTTON LABEL ' Crear' 	 ICON '<i class="fa fa-plus" aria-hidden="true"></i>' 	 ACTION 'DunsNew()'  CLASS 'btn-success mybtnbar' GRID 0 OF o
+				BUTTON LABEL ' Importar' ICON '<i class="fa fa-share" aria-hidden="true"></i>' 	 ACTION 'DunsImport()' 	 CLASS 'btn-success mybtnbar' GRID 0 OF o
 
 			ENDDIV o
 

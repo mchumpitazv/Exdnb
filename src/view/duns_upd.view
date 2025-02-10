@@ -35,7 +35,7 @@
                 COL o GRID 6
                         
                     DIV o ID 'bar' CLASS 'btn-group'
-                        BUTTON LABEL ' Editar' 	ICON '<i class="far fa-edit" aria-hidden="true"></i>' ACTION 'editRow()'  CLASS 'btn-secondary mybtnbar' GRID 0 OF o
+                        BUTTON LABEL ' Editar' 	ICON '<i class="far fa-edit" aria-hidden="true"></i>' ACTION 'editRow()'  CLASS 'btn-success mybtnbar' GRID 0 OF o
                         SWITCH ID 'switch' VALUE .F. LABEL 'Recopilar Informacion' OF o
                     ENDDIV o                                       
 
